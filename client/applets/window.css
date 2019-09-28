@@ -1,10 +1,14 @@
 .applet {
   position: relative;
   width: 400px;
-  height: 400px;
-  background: #CCC;
-  padding: 10px;
+  height: 300px;
+  background: rgb(24, 23, 23);
+  padding-left: 10px;
+  parring-top: 10px;
   margin-bottom: 10px;
+  color: greenyellow;
+  border: 1px solid;
+  font-family: monospace;
 }
 
 /* other items appear above handle */
@@ -21,7 +25,7 @@
   width: 100%;
 
   background: black;
-  color: white;
+  color: greenyellow;
   padding: 5px;
 
 }
@@ -29,6 +33,7 @@
 .top-bar {
   display: flex;
   flex-direction: row;
+  border-bottom: 1px solid greenyellow;
 }
 
 .minimize-box {
@@ -43,8 +48,8 @@
 }
 
 .minimize-icon {
-  padding: 3px;
-  color:lightpink;
+  padding: 1px;
+  color:fuchsia;
   line-height: 3px;
 }
 
@@ -59,5 +64,7 @@
 
 .content {
   position: relative;
-  top: 20px;
+  overflow: scroll;
+  top: 30px;
+  height: calc(100% - 40px);
 }

@@ -1,0 +1,21 @@
+.applet .irc-input {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    bottom: 10px;
+    width: calc(100% - 20px);
+  }
+
+.applet .irc-input > input {
+    width: 90%;
+    color: greenyellow;
+    background-color: rgb(24, 23, 23);
+    border-color: greenyellow;
+    font-family: monospace;
+}
+
+.applet .irc-input .irc-send {
+    margin-left: 10px;
+    border: 1px solid;
+    padding: 4px 10px;
+}
