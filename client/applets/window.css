@@ -1,0 +1,36 @@
+.applet {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background: #CCC;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* other items appear above handle */
+.applet > * {
+  position: relative;
+}
+
+/* handle appears behind other elements
+   takes up entire size of parent */
+.applet .handle {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+
+  background: black;
+  color: white;
+  padding: 5px;
+
+}
+
+.is-dragging .handle{
+  background: #09F;
+}
+
+.content {
+  position: relative;
+  top: 20px;
+}
