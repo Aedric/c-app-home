@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>c-app-home</title>
-    <script src="https://draggabilly.desandro.com/draggabilly.pkgd.js"></script>
-    <script src="client/client.js"></script>
+    <script async src="https://unpkg.com/draggabilly@2/dist/draggabilly.pkgd.min.js"></script>
+    <script defer src="client/client.js"></script>
     <link rel="stylesheet" href="/client/applets/window.css">
     <link rel="stylesheet" href="/client/applets/irc/irc.css">
     <link rel="stylesheet" href="/client/nav/nav.css">
@@ -14,7 +14,17 @@
 </head>
 <body>
     <div class="applet irc">
-        <div class="handle"> IRC WINDOW</div>
+        <div class="handle top-bar">
+            <div class="minimize-box">
+                <div class="minimize-icon">
+                    --
+                    --
+                    --
+                    --
+                </div>
+            </div>
+            <div class="applet-name"> IRC </div>
+        </div>
         <div class="content">
             <p>text log</p>
             <p>text log</p>
