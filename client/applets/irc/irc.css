@@ -4,24 +4,26 @@
     flex-direction: row;
     bottom: 10px;
     width: 100%;
-    border-top: 1px solid yellowgreen;
+    border: 1px solid lightblue;
     padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #1b1b1b;
   }
 
 .applet .irc-input > input {
     width: 90%;
     margin-left: 10px;
-    color: greenyellow;
+    color: lightblue;
     background-color: rgb(24, 23, 23);
-    border-color: greenyellow;
+    border-color: lightblue;
     font-family: monospace;
 }
 
 .applet .irc-input .irc-send {
     margin-left: 10px;
     margin-right: 10px;
-    border: 2px solid yellowgreen;
+    border: 2px solid lightblue;
     background-color: transparent;
     padding: 4px 10px;
-    color: yellowgreen;
+    color: lightblue;
 }
