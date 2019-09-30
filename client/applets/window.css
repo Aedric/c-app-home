@@ -3,7 +3,6 @@
   width: 400px;
   height: 300px;
   background: rgb(24, 23, 23);
-  padding-left: 10px;
   margin-bottom: 10px;
   color: greenyellow;
   border: 1px solid;
@@ -58,12 +57,29 @@
 }
 
 .is-dragging .handle{
-  background: #09F;
+  background: inherit;
 }
 
 .content {
   position: relative;
   overflow: scroll;
+  display: flex;
+  flex-direction: column;
   top: 30px;
-  height: calc(100% - 40px);
+  padding: 0 10px 10px 10px;
+  height: calc(100% - 60px);
+}
+
+.content::-webkit-scrollbar {
+  width: 10px;
+  padding-right: 10px;
+
+}
+
+.content::-webkit-scrollbar-thumb {
+  background-color: yellowgreen;
+}
+
+.content::-webkit-scrollbar-corner {
+  background-color: transparent;
 }
