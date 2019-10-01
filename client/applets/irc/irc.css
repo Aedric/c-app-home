@@ -1,29 +1,29 @@
 .applet .irc-input {
-    position:absolute;
-    display:flex;
-    flex-direction:row;
-    bottom:10px;
-    width:100%;
-    border:1px solid #ADD8E6;
-    padding-top:10px;
-    padding-bottom:10px;
-    background-color:#1b1b1b;
+  position:absolute;
+  display:flex;
+  flex-direction:row;
+  bottom:10px;
+  width:100%;
+  border:1px solid #ADD8E6;
+  padding-top:10px;
+  padding-bottom:10px;
+  background-color:#1b1b1b;
 }
 
 .applet .irc-input > input {
-    width:90%;
-    margin-left:10px;
-    color:#ADD8E6;
-    background-color:#181717;
-    font-family:monospace;
-    border-color:#ADD8E6;
+  width:90%;
+  margin-left:10px;
+  color:#ADD8E6;
+  background-color:#181717;
+  font-family:monospace;
+  border-color:#ADD8E6;
 }
 
 .applet .irc-input .irc-send {
-    margin-left:10px;
-    margin-right:10px;
-    border:2px solid #ADD8E6;
-    background-color:transparent;
-    color:#ADD8E6;
-    padding:4px 10px;
+  margin-left:10px;
+  margin-right:10px;
+  border:2px solid #ADD8E6;
+  background-color:transparent;
+  color:#ADD8E6;
+  padding:4px 10px;
 }
