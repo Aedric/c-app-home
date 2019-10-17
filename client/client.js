@@ -4,8 +4,10 @@ window.onload = function () {
   console.log(applets);
 
   if (applets) {
-    import('./applets/window.js').then((window) => {
-      window.windowLoad(applets);
+    import(
+      /* webpackChunkName: "[request]" */
+      './applets/window.js').then((window) => {
+         window.windowLoad(applets);
     });
   }
 }
