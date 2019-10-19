@@ -1,35 +1,51 @@
-function load (url, callback) {
-  let xhr = new XMLHttpRequest();
-
-  xhr.onreadystatechange = function() {
-    if (xhr.readystate === 4) {
-      callback(xhr.response);
-    }
-  }
-
-  xhr.open('GET', url, true);
-  xhr.send('');
+//  Commented out xhr load
+//export function load (url, callback) {
+// let xhr = new XMLHttpRequest();
+//
+// xhr.onreadystatechange = function() {
+//   if (xhr.readystate === 4) {
+//     callback(xhr.response);
+//   }
+// }
+//
+// xhr.open('GET', url, true);
+// xhr.send('');
+//}
+import { IRC } from './utils/webIrc.js';
+export function load () {
+  const irc = IRC('irc-content', connected, disconnected);
+  const ret  = irc.connect(wsUrl, '80', false, 'aedric', 'general');
+  console.log(ret);
 }
-// const getUrl = `${env.IRC_SERVER_URL}${env.IRC_GET}`;
-const getUrl = 'ws.cyberia.club:443';
-// const pageSize = env.IRC_PAGE_SIZE < 4 ? env.IRC_PAGE_SIZE : 4;
 
-let activeChat = {};
-let chatLog = [];
+const wsUrl = '192.168.1.9';
 
-
-load(getUrl, handleDataLoad);
-
-var handleDataLoad = (data) => {
+function handleDataLoad (data) {
   console.log(data);
   // handle that data
-  parseChatPayload(0, data.chatPayload).then((parsedChat) => {
+  parseChatPayload(0, data).then((parsedChat) => {
     console.log(parsedChat);
-  }); 
+  });
 }
 
-parseChatPayload = (data) => {
-  return data
-  //.replace(/\r\n|\n\r|\n|\r/g, "\n")
-  //  .split("\n"); 
+function disconnect() {
+	console.log('disconnect');
+		irc.disconnect();
+}
+
+function connected() {
+	console.log('connected');
+}
+
+function disconnected() {
+	console.log('disconnected');
+}
+
+const parseChatPayload = (data) => {
+  if (data.data) {
+    data = data.data
+  }
+  console.log(data);
+  return new Promise(data);
+  
 }

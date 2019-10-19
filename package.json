@@ -7,7 +7,5 @@
   "author": "aedric",
   "license": " AGPL",
   "private": false,
-  "dependencies": {
-    "preact": "^10.0.0"
-  }
+  "dependencies": {}
 }
